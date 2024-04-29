@@ -5,7 +5,6 @@ universal_path_for_installation_directory="$HOME/$literal_name_of_installation_d
 firefox_installation_directory="$universal_path_for_installation_directory/firefox"
 official_package_location="https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US"
 tar_location="./hello.tar.bz2"
-open_tar_location="./hello"
 open_tar_application_data_location="firefox"
 
 echo "Welcome to Firefox tarball installer, just chill and wait for the installation to complete!"
@@ -28,7 +27,6 @@ mv $open_tar_application_data_location $firefox_installation_directory
 
 echo "Firefox successfully moved to your safe place!"
 
-rm -rf $open_tar_location
 rm $tar_location
 
 if [ ! -d ~/.local/bin/ ]; then
