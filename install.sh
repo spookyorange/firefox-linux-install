@@ -11,6 +11,7 @@ local_bin_path="$HOME/.local/bin"
 local_application_path="$HOME/.local/share/applications"
 app_bin_in_local_bin="$local_bin_path/$app_name"
 desktop_in_local_applications="$local_application_path/$app_name.desktop"
+icon_path="$app_installation_directory/browser/chrome/icons/default/default128.png"
 
 echo "Welcome to Firefox tarball installer, just chill and wait for the installation to complete!"
 
@@ -70,7 +71,7 @@ echo "
 Name=Firefox
 Keywords=web;browser;internet
 Exec=$app_installation_directory/firefox %u
-Icon=$app_installation_directory/browser/chrome/icons/default/default128.png
+Icon=$icon_path
 Terminal=false
 Type=Application
 MimeType=text/html;text/xml;application/xhtml+xml;application/vnd.mozilla.xul+xml;text/mml;x-scheme-handler/http;x-scheme-handler/https;
