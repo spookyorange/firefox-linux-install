@@ -17,7 +17,7 @@ echo "Welcome to Firefox tarball installer, just chill and wait for the installa
 sleep 1
 
 echo "Checking to see if an older installation exists"
-if [ -d $app_bin_in_local_bin ]; then
+if [ -f $app_bin_in_local_bin ]; then
   echo "Old bin file detected, removing..."
   rm $app_bin_in_local_bin
 fi
@@ -27,7 +27,7 @@ if [ -d $app_installation_directory ]; then
   rm -rf $app_installation_directory
 fi
 
-if [ -d $desktop_in_local_applications ]; then
+if [ -f $desktop_in_local_applications ]; then
   echo "Old app files are found, removing..."
   rm $desktop_in_local_applications
 fi
