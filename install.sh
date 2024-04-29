@@ -12,6 +12,7 @@ local_application_path="$HOME/.local/share/applications"
 app_bin_in_local_bin="$local_bin_path/$app_name"
 desktop_in_local_applications="$local_application_path/$app_name.desktop"
 icon_path="$app_installation_directory/browser/chrome/icons/default/default128.png"
+executable_path=$app_installation_directory/firefox
 
 echo "Welcome to Firefox tarball installer, just chill and wait for the installation to complete!"
 
@@ -61,7 +62,7 @@ fi
 touch $app_bin_in_local_bin
 chmod u+x $app_bin_in_local_bin
 echo "#!/bin/bash
-$app_installation_directory/firefox" >> $app_bin_in_local_bin
+$executable_path" >> $app_bin_in_local_bin
 
 echo "Created executable for your \$PATH if you ever need"
 
@@ -70,7 +71,7 @@ echo "
 [Desktop Entry]
 Name=Firefox
 Keywords=web;browser;internet
-Exec=$app_installation_directory/firefox %u
+Exec=$executable_path %u
 Icon=$icon_path
 Terminal=false
 Type=Application
@@ -79,13 +80,13 @@ Categories=Network;WebBrowser;
 Actions=new-window;new-private-window;profile-manager-window;
 [Desktop Action new-window]
 Name=Open a New Window
-Exec=$app_installation_directory/firefox --new-window %u
+Exec=$executable_path --new-window %u
 [Desktop Action new-private-window]
 Name=Open a New Private Window
-Exec=$app_installation_directory/firefox --private-window %u
+Exec=$executable_path --private-window %u
 [Desktop Action profile-manager-window]
 Name=Open the Profile Manager
-Exec=$app_installation_directory/firefox --ProfileManager
+Exec=$executable_path --ProfileManager
 " >> $desktop_in_local_applications
 
 echo "Created desktop entry successfully"
