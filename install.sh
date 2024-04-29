@@ -29,7 +29,7 @@ fi
 
 if [ -d $desktop_in_local_applications ]; then
   echo "Old app files are found, removing..."
-  rm -rf $desktop_in_local_applications
+  rm $desktop_in_local_applications
 fi
 
 sleep 1
