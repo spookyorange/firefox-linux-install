@@ -6,6 +6,8 @@ Learn how I scriptified it @ [my relevant Medium article](https://medium.com/@sp
 
 If you are using Steam Deck, this script will install it on your system in like 15 seconds(so you don't have to wait 15 minutes for the repos to load)
 
+Note: This installation script is by no means affiliated with Mozilla Firefox project, or its maintainers.
+
 ## Usage
 
 Clone the repo and run the script
